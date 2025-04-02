@@ -1,0 +1,50 @@
+{
+  "sparse_features": [
+    "user",
+    "item",
+    "daytime",
+    "weekday",
+    "isweekend",
+    "homework",
+    "cost",
+    "weather",
+    "country",
+    "city"
+  ],
+  "vocab_sizes": {
+    "user": 958,
+    "item": 4083,
+    "daytime": 8,
+    "weekday": 8,
+    "isweekend": 3,
+    "homework": 4,
+    "cost": 3,
+    "weather": 10,
+    "country": 81,
+    "city": 234
+  },
+  "default_value_map": {
+    "user": "87",
+    "item": "973",
+    "daytime": "5041",
+    "weekday": "5052",
+    "isweekend": "5054",
+    "homework": "5055",
+    "cost": "5058",
+    "weather": "5061",
+    "country": "5069",
+    "city": "5149"
+  },
+  "value_thresholds": {
+    "user": 230,
+    "item": 230,
+    "daytime": 230,
+    "weekday": 230,
+    "isweekend": 230,
+    "homework": 230,
+    "cost": 230,
+    "weather": 230,
+    "country": 230,
+    "city": 230
+  }
+}
