@@ -1,0 +1,650 @@
+{
+  "model_type": "DeepFM",
+  "embedding_dim": 12,
+  "feature_count": 10,
+  "sparse_features": [
+    "user",
+    "item",
+    "daytime",
+    "weekday",
+    "isweekend",
+    "homework",
+    "cost",
+    "weather",
+    "country",
+    "city"
+  ],
+  "parameters": {
+    "embedding_dict.user.weight": {
+      "shape": [
+        958,
+        12
+      ],
+      "param_count": 11496,
+      "importance_score": 0.004660893231630325
+    },
+    "embedding_dict.item.weight": {
+      "shape": [
+        4083,
+        12
+      ],
+      "param_count": 48996,
+      "importance_score": 0.00258908374235034
+    },
+    "embedding_dict.daytime.weight": {
+      "shape": [
+        8,
+        12
+      ],
+      "param_count": 96,
+      "importance_score": 0.038967564702034
+    },
+    "embedding_dict.weekday.weight": {
+      "shape": [
+        8,
+        12
+      ],
+      "param_count": 96,
+      "importance_score": 0.030076824128627777
+    },
+    "embedding_dict.isweekend.weight": {
+      "shape": [
+        3,
+        12
+      ],
+      "param_count": 36,
+      "importance_score": 0.020305117592215538
+    },
+    "embedding_dict.homework.weight": {
+      "shape": [
+        4,
+        12
+      ],
+      "param_count": 48,
+      "importance_score": 0.03958999738097191
+    },
+    "embedding_dict.cost.weight": {
+      "shape": [
+        3,
+        12
+      ],
+      "param_count": 36,
+      "importance_score": 0.5271099805831909
+    },
+    "embedding_dict.weather.weight": {
+      "shape": [
+        10,
+        12
+      ],
+      "param_count": 120,
+      "importance_score": 0.028811965137720108
+    },
+    "embedding_dict.country.weight": {
+      "shape": [
+        81,
+        12
+      ],
+      "param_count": 972,
+      "importance_score": 0.007513515651226044
+    },
+    "embedding_dict.city.weight": {
+      "shape": [
+        234,
+        12
+      ],
+      "param_count": 2808,
+      "importance_score": 0.0030270128045231104
+    },
+    "linear_model.embedding_dict.user.weight": {
+      "shape": [
+        958,
+        1
+      ],
+      "param_count": 958,
+      "importance_score": 2.594423449409078e-06
+    },
+    "linear_model.embedding_dict.item.weight": {
+      "shape": [
+        4083,
+        1
+      ],
+      "param_count": 4083,
+      "importance_score": 6.107702574809082e-07
+    },
+    "linear_model.embedding_dict.daytime.weight": {
+      "shape": [
+        8,
+        1
+      ],
+      "param_count": 8,
+      "importance_score": 0.00030727923149242997
+    },
+    "linear_model.embedding_dict.weekday.weight": {
+      "shape": [
+        8,
+        1
+      ],
+      "param_count": 8,
+      "importance_score": 0.00032304198248311877
+    },
+    "linear_model.embedding_dict.isweekend.weight": {
+      "shape": [
+        3,
+        1
+      ],
+      "param_count": 3,
+      "importance_score": 0.0008322579669766128
+    },
+    "linear_model.embedding_dict.homework.weight": {
+      "shape": [
+        4,
+        1
+      ],
+      "param_count": 4,
+      "importance_score": 0.0006438829004764557
+    },
+    "linear_model.embedding_dict.cost.weight": {
+      "shape": [
+        3,
+        1
+      ],
+      "param_count": 3,
+      "importance_score": 0.0008168136700987816
+    },
+    "linear_model.embedding_dict.weather.weight": {
+      "shape": [
+        10,
+        1
+      ],
+      "param_count": 10,
+      "importance_score": 0.0002318564074812457
+    },
+    "linear_model.embedding_dict.country.weight": {
+      "shape": [
+        81,
+        1
+      ],
+      "param_count": 81,
+      "importance_score": 2.8989381462452002e-05
+    },
+    "linear_model.embedding_dict.city.weight": {
+      "shape": [
+        234,
+        1
+      ],
+      "param_count": 234,
+      "importance_score": 1.0461520105309319e-05
+    },
+    "out.bias": {
+      "shape": [
+        1
+      ],
+      "param_count": 1,
+      "importance_score": 0.002423332305625081
+    },
+    "dnn.linears.0.weight": {
+      "shape": [
+        128,
+        120
+      ],
+      "param_count": 15360,
+      "importance_score": 0.003369795624166727
+    },
+    "dnn.linears.0.bias": {
+      "shape": [
+        128
+      ],
+      "param_count": 128,
+      "importance_score": 6.467593193054199
+    },
+    "dnn.linears.1.weight": {
+      "shape": [
+        64,
+        128
+      ],
+      "param_count": 8192,
+      "importance_score": 0.0035932420287281275
+    },
+    "dnn.linears.1.bias": {
+      "shape": [
+        64
+      ],
+      "param_count": 64,
+      "importance_score": 0.005575084127485752
+    },
+    "dnn.linears.2.weight": {
+      "shape": [
+        32,
+        64
+      ],
+      "param_count": 2048,
+      "importance_score": 0.005037197843194008
+    },
+    "dnn.linears.2.bias": {
+      "shape": [
+        32
+      ],
+      "param_count": 32,
+      "importance_score": 0.0014180836733430624
+    },
+    "dnn.bn.0.weight": {
+      "shape": [
+        128
+      ],
+      "param_count": 128,
+      "importance_score": 0.0006299767410382628
+    },
+    "dnn.bn.0.bias": {
+      "shape": [
+        128
+      ],
+      "param_count": 128,
+      "importance_score": 0.00021190589177422225
+    },
+    "dnn.bn.1.weight": {
+      "shape": [
+        64
+      ],
+      "param_count": 64,
+      "importance_score": 0.0006243024836294353
+    },
+    "dnn.bn.1.bias": {
+      "shape": [
+        64
+      ],
+      "param_count": 64,
+      "importance_score": 4.584411362884566e-05
+    },
+    "dnn.bn.2.weight": {
+      "shape": [
+        32
+      ],
+      "param_count": 32,
+      "importance_score": 0.0005069400649517775
+    },
+    "dnn.bn.2.bias": {
+      "shape": [
+        32
+      ],
+      "param_count": 32,
+      "importance_score": 3.0714425520272925e-05
+    },
+    "dnn_linear.weight": {
+      "shape": [
+        1,
+        32
+      ],
+      "param_count": 32,
+      "importance_score": 0.02627933956682682
+    }
+  },
+  "dnn_hidden_units": [
+    128,
+    64,
+    32
+  ],
+  "stats": {
+    "total_params": 96401,
+    "layers": {
+      "embedding.user": {
+        "param_count": 11496,
+        "importance_score": 0.004660893231630325
+      },
+      "embedding.item": {
+        "param_count": 48996,
+        "importance_score": 0.00258908374235034
+      },
+      "embedding.daytime": {
+        "param_count": 96,
+        "importance_score": 0.038967564702034
+      },
+      "embedding.weekday": {
+        "param_count": 96,
+        "importance_score": 0.030076824128627777
+      },
+      "embedding.isweekend": {
+        "param_count": 36,
+        "importance_score": 0.020305117592215538
+      },
+      "embedding.homework": {
+        "param_count": 48,
+        "importance_score": 0.03958999738097191
+      },
+      "embedding.cost": {
+        "param_count": 36,
+        "importance_score": 0.5271099805831909
+      },
+      "embedding.weather": {
+        "param_count": 120,
+        "importance_score": 0.028811965137720108
+      },
+      "embedding.country": {
+        "param_count": 972,
+        "importance_score": 0.007513515651226044
+      },
+      "embedding.city": {
+        "param_count": 2808,
+        "importance_score": 0.0030270128045231104
+      },
+      "embedding.embedding_dict": {
+        "param_count": 5392,
+        "importance_score": 0.003197788254283296
+      },
+      "other": {
+        "param_count": 1,
+        "importance_score": 0.002423332305625081
+      },
+      "dnn_linear": {
+        "param_count": 25856,
+        "importance_score": 6.512865935917944
+      },
+      "dnn_layer_0": {
+        "param_count": 448,
+        "importance_score": 0.0020496837205428164
+      }
+    }
+  },
+  "layer_contribution": {
+    "raw_scores": {
+      "dnn_linear": 920.6071308776736,
+      "embedding.item": 10.571228981018066,
+      "embedding.user": 4.46513557434082,
+      "embedding.cost": 1.5813298225402832,
+      "embedding.city": 0.7083209753036499,
+      "embedding.country": 0.6085947751998901,
+      "embedding.daytime": 0.311740517616272,
+      "embedding.weather": 0.2881196439266205,
+      "embedding.weekday": 0.24061459302902222,
+      "dnn_layer_0": 0.1678553029196337,
+      "embedding.homework": 0.15835998952388763,
+      "embedding.isweekend": 0.060915350914001465,
+      "embedding.embedding_dict": 0.024659248301759362,
+      "other": 0.002423332305625081
+    },
+    "percentages": {
+      "dnn_linear": 97.95814311321949,
+      "embedding.item": 1.1248424291673005,
+      "embedding.user": 0.47511731654110445,
+      "embedding.cost": 0.1682630167310599,
+      "embedding.city": 0.07536961765953325,
+      "embedding.country": 0.06475814936405279,
+      "embedding.daytime": 0.03317106854226789,
+      "embedding.weather": 0.030657665324171784,
+      "embedding.weekday": 0.02560284180787855,
+      "dnn_layer_0": 0.017860815144934105,
+      "embedding.homework": 0.016850456613778046,
+      "embedding.isweekend": 0.006481760202027625,
+      "embedding.embedding_dict": 0.0026238925304708834,
+      "other": 0.000257857151919946
+    },
+    "total_importance": 939.7964289846132
+  },
+  "feature_importance": {
+    "feature_ranking": {
+      "isweekend": 1,
+      "cost": 2,
+      "homework": 3,
+      "weekday": 4,
+      "daytime": 5,
+      "weather": 6,
+      "country": 7,
+      "city": 8,
+      "user": 9,
+      "item": 10
+    },
+    "feature_details": {
+      "user": {
+        "mean_importance": 2.594423449409078e-06,
+        "median_importance": 3.3458746705314e-14,
+        "max_importance": 5.3992516768630594e-05,
+        "min_importance": 0.0,
+        "least_important_indices": [
+          0,
+          6,
+          7,
+          16,
+          19,
+          22,
+          93,
+          94,
+          116,
+          117
+        ],
+        "most_important_indices": [
+          36,
+          98,
+          24,
+          105,
+          85,
+          193,
+          114,
+          146,
+          97,
+          167
+        ]
+      },
+      "item": {
+        "mean_importance": 6.107702574809082e-07,
+        "median_importance": 2.1072391773561785e-21,
+        "max_importance": 2.5000001187436283e-05,
+        "min_importance": 0.0,
+        "least_important_indices": [
+          17,
+          27,
+          32,
+          33,
+          42,
+          47,
+          69,
+          77,
+          94,
+          98
+        ],
+        "most_important_indices": [
+          2780,
+          1780,
+          796,
+          4048,
+          919,
+          462,
+          788,
+          1325,
+          445,
+          423
+        ]
+      },
+      "daytime": {
+        "mean_importance": 0.00030727923149242997,
+        "median_importance": 0.00019351027731318027,
+        "max_importance": 0.0006999949109740555,
+        "min_importance": 0.0,
+        "least_important_indices": [
+          7,
+          6,
+          3,
+          5,
+          4,
+          1,
+          0,
+          2
+        ],
+        "most_important_indices": [
+          2,
+          0,
+          1,
+          4,
+          5,
+          3,
+          6,
+          7
+        ]
+      },
+      "weekday": {
+        "mean_importance": 0.00032304198248311877,
+        "median_importance": 0.000343901599990204,
+        "max_importance": 0.0004896295140497386,
+        "min_importance": 0.0,
+        "least_important_indices": [
+          7,
+          3,
+          5,
+          2,
+          6,
+          1,
+          4,
+          0
+        ],
+        "most_important_indices": [
+          0,
+          4,
+          1,
+          6,
+          2,
+          5,
+          3,
+          7
+        ]
+      },
+      "isweekend": {
+        "mean_importance": 0.0008322579669766128,
+        "median_importance": 0.0010470919078215957,
+        "max_importance": 0.00144968181848526,
+        "min_importance": 0.0,
+        "least_important_indices": [
+          2,
+          0,
+          1
+        ],
+        "most_important_indices": [
+          1,
+          0,
+          2
+        ]
+      },
+      "homework": {
+        "mean_importance": 0.0006438829004764557,
+        "median_importance": 0.00011555045057320967,
+        "max_importance": 0.001989822369068861,
+        "min_importance": 0.0,
+        "least_important_indices": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "most_important_indices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "cost": {
+        "mean_importance": 0.0008168136700987816,
+        "median_importance": 0.00010730185749707744,
+        "max_importance": 0.0023431391455233097,
+        "min_importance": 0.0,
+        "least_important_indices": [
+          2,
+          1,
+          0
+        ],
+        "most_important_indices": [
+          0,
+          1,
+          2
+        ]
+      },
+      "weather": {
+        "mean_importance": 0.0002318564074812457,
+        "median_importance": 2.100547317240853e-05,
+        "max_importance": 0.0010396281722933054,
+        "min_importance": 0.0,
+        "least_important_indices": [
+          8,
+          9,
+          6,
+          7,
+          5,
+          4,
+          3,
+          2,
+          0,
+          1
+        ],
+        "most_important_indices": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          7,
+          6,
+          8,
+          9
+        ]
+      },
+      "country": {
+        "mean_importance": 2.8989381462452002e-05,
+        "median_importance": 7.817716323188506e-07,
+        "max_importance": 0.0006048203795216978,
+        "min_importance": 0.0,
+        "least_important_indices": [
+          60,
+          62,
+          66,
+          69,
+          70,
+          71,
+          72,
+          74,
+          75,
+          77
+        ],
+        "most_important_indices": [
+          0,
+          5,
+          1,
+          6,
+          18,
+          4,
+          8,
+          9,
+          17,
+          3
+        ]
+      },
+      "city": {
+        "mean_importance": 1.0461520105309319e-05,
+        "median_importance": 2.2926040232906786e-10,
+        "max_importance": 0.0010798440780490637,
+        "min_importance": 0.0,
+        "least_important_indices": [
+          44,
+          68,
+          78,
+          96,
+          101,
+          108,
+          114,
+          120,
+          121,
+          134
+        ],
+        "most_important_indices": [
+          0,
+          1,
+          6,
+          10,
+          16,
+          86,
+          67,
+          30,
+          132,
+          73
+        ]
+      }
+    }
+  }
+}

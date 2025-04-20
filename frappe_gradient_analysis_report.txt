@@ -1,0 +1,27 @@
+Frappe DeepFM教师模型梯度分析报告
+===================================
+
+1. DNN层梯度分析结果:
+  - 梯度范数最大的层: dnn.bn.0.weight, 平均值: 0.070925
+  - 梯度范数最小的层: dnn.linears.0.bias, 平均值: 0.037525
+
+2. 嵌入层梯度分析结果:
+  - 梯度范数最大的嵌入层: linear_model.embedding_dict.weekday.weight, 平均值: 0.060872
+  - 梯度范数最小的嵌入层: embedding_dict.cost.weight, 平均值: 0.028128
+
+3. Frappe特征重要性排名:
+  1. item: 1377.578720
+  2. user: 316.655237
+  3. city: 65.801165
+  4. country: 19.076982
+  5. weather: 1.384664
+  6. cost: 0.858591
+  7. daytime: 0.785102
+  8. weekday: 0.592706
+  9. homework: 0.251087
+  10. isweekend: 0.126860
+
+4. 模型优化建议:
+  - 关注梯度最活跃的层 (dnn.bn.0.weight), 可能是模型中最重要的特征提取部分
+  - 'item' 是最重要的特征，在模型中可给予更多关注
+  - 'isweekend' 特征贡献较小，可考虑在轻量模型中省略

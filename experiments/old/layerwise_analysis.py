@@ -30,7 +30,7 @@ from captum.attr import LayerLRP, LayerIntegratedGradients
 # 添加项目根目录到路径以便导入
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from models.teacher_model import CTRTeacherModel
+from model_old.teacher_model import CTRTeacherModel
 
 # ---------------------------
 # 1. 模型加载与数据预处理

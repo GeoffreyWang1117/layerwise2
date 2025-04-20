@@ -14,7 +14,7 @@ import logging
 from typing import List, Dict, Tuple, Union, Any, Optional
 from datasets import load_dataset
 from tqdm import tqdm
-
+import onnx
 
 class CTRFrappeTeacherModel:
     def __init__(
@@ -471,19 +471,20 @@ class CTRFrappeTeacherModel:
         
         return pred_ans
     
-    def save_model(self, path: str) -> None:
+    def save_model(self, path: str, save_full_model: bool = True) -> None:
         """
-        增强型模型保存，包括特征统计信息
+        Enhanced model saving, includes feature statistics and saves model state dictionary
         
         Args:
-            path: 保存路径
+            path: Path to save state dict version
+            save_full_model: If True, also save full model
         """
-        # 获取每个特征的词汇表大小
+        # Get vocabulary size for each feature
         vocab_sizes = {}
         for feat, feat_spec in zip(self.sparse_features, self.linear_feature_columns):
             vocab_sizes[feat] = feat_spec.vocabulary_size
         
-        # 创建完整的模型状态
+        # Create complete model state dictionary
         model_state = {
             'model_state_dict': self.model.state_dict(),
             'encoders': self.encoders,
@@ -499,11 +500,11 @@ class CTRFrappeTeacherModel:
             'default_value_map': self.default_value_map
         }
         
-        # 保存模型
+        # Save state dict version
         torch.save(model_state, path)
-        print(f"模型已保存至: {path}")
+        print(f"Model state dictionary saved to: {path}")
         
-        # 同时保存特征处理信息为JSON（便于查看）
+        # Save feature info as JSON (for easy viewing)
         feature_info = {
             'sparse_features': self.sparse_features,
             'vocab_sizes': vocab_sizes,
@@ -514,8 +515,37 @@ class CTRFrappeTeacherModel:
         info_path = path.replace('.pth', '_info.json')
         with open(info_path, 'w') as f:
             json.dump(feature_info, f, indent=2)
-        print(f"特征信息已保存至: {info_path}")
-    
+        print(f"Feature info saved to: {info_path}")
+        
+        # Get outputs directory
+        outputs_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'outputs')
+        os.makedirs(outputs_dir, exist_ok=True)
+        
+        # Additionally save the full model
+        if save_full_model:
+            # Define full model path
+            full_model_path = os.path.join(outputs_dir, 'teacher_frappe_full.pth')
+            
+            # Save the complete model
+            model_copy = self.model
+            model_copy.eval()  # Set to evaluation mode
+            
+            # Create a complete package with the actual model and metadata
+            full_model_package = {
+                'model': model_copy,  # The actual PyTorch model
+                'metadata': {
+                    'sparse_features': self.sparse_features,
+                    'embedding_dim': self.embedding_dim,
+                    'task': self.task,
+                    'vocab_sizes': vocab_sizes,
+                    'encoders': self.encoders
+                }
+            }
+            
+            # Save the full model package
+            torch.save(full_model_package, full_model_path)
+            print(f"Full model saved to: {full_model_path}")
+
     def load_model(self, path: str, data: Optional[pd.DataFrame] = None) -> None:
         """
         加载模型，支持无数据加载
@@ -870,7 +900,7 @@ if __name__ == "__main__":
     # 训练并评估模型
     try:
         model = train_and_evaluate_frappe_model(
-            epochs=5,           # 减少训练轮数以加快训练
+            epochs=20,           # 减少训练轮数以加快训练
             batch_size=2048,
             embedding_dim=12,    # 调整嵌入维度
             dnn_hidden_units=(128, 64, 32),  # 3层DNN

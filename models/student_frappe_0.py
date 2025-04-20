@@ -719,7 +719,7 @@ if __name__ == "__main__":
             train_data.sample(5000),  # 使用小数据集进行演示
             test_data.sample(1000),   # 使用小的验证集
             batch_size=512,
-            epochs=3,                 # 演示时使用较少的轮数
+            epochs=10,                 # 演示时使用较少的轮数
             hidden_units=hidden_units,
             distill_alpha=0.7,        # 较高的蒸馏权重
             temperature=3.0           # 较高温度使软目标更平滑

@@ -1,0 +1,301 @@
+{
+  "model_type": "FrappeStudentModel",
+  "embedding_dim": 12,
+  "feature_count": 10,
+  "sparse_features": [
+    "user",
+    "item",
+    "daytime",
+    "weekday",
+    "isweekend",
+    "homework",
+    "cost",
+    "weather",
+    "country",
+    "city"
+  ],
+  "hidden_units": [
+    64,
+    32
+  ],
+  "is_transfer_learning": true,
+  "parameters": {
+    "embedding_dict.user.weight": {
+      "shape": [
+        1000,
+        12
+      ],
+      "param_count": 12000,
+      "pruned_count": 864,
+      "pruning_rate": 0.072,
+      "importance_score": 9.226919672755685e-09
+    },
+    "embedding_dict.item.weight": {
+      "shape": [
+        4083,
+        12
+      ],
+      "param_count": 48996,
+      "pruned_count": 3576,
+      "pruning_rate": 0.07298554984080333,
+      "importance_score": 4.617383098093342e-08
+    },
+    "embedding_dict.daytime.weight": {
+      "shape": [
+        1000,
+        12
+      ],
+      "param_count": 12000,
+      "pruned_count": 0,
+      "pruning_rate": 0.0,
+      "importance_score": 7.67683658864371e-08
+    },
+    "embedding_dict.weekday.weight": {
+      "shape": [
+        1000,
+        12
+      ],
+      "param_count": 12000,
+      "pruned_count": 0,
+      "pruning_rate": 0.0,
+      "importance_score": 6.957157694387206e-08
+    },
+    "embedding_dict.isweekend.weight": {
+      "shape": [
+        1000,
+        12
+      ],
+      "param_count": 12000,
+      "pruned_count": 0,
+      "pruning_rate": 0.0,
+      "importance_score": 9.137660583746765e-08
+    },
+    "embedding_dict.homework.weight": {
+      "shape": [
+        1000,
+        12
+      ],
+      "param_count": 12000,
+      "pruned_count": 0,
+      "pruning_rate": 0.0,
+      "importance_score": 3.747216581473367e-08
+    },
+    "embedding_dict.cost.weight": {
+      "shape": [
+        1000,
+        12
+      ],
+      "param_count": 12000,
+      "pruned_count": 0,
+      "pruning_rate": 0.0,
+      "importance_score": 2.72316658112004e-08
+    },
+    "embedding_dict.weather.weight": {
+      "shape": [
+        1000,
+        12
+      ],
+      "param_count": 12000,
+      "pruned_count": 0,
+      "pruning_rate": 0.0,
+      "importance_score": 8.818559393830583e-08
+    },
+    "embedding_dict.country.weight": {
+      "shape": [
+        1000,
+        12
+      ],
+      "param_count": 12000,
+      "pruned_count": 0,
+      "pruning_rate": 0.0,
+      "importance_score": 7.461242290673908e-08
+    },
+    "embedding_dict.city.weight": {
+      "shape": [
+        1000,
+        12
+      ],
+      "param_count": 12000,
+      "pruned_count": 0,
+      "pruning_rate": 0.0,
+      "importance_score": 8.608211032878899e-08
+    },
+    "dnn.dense_0.weight": {
+      "shape": [
+        64,
+        120
+      ],
+      "param_count": 7680,
+      "pruned_count": 6600,
+      "pruning_rate": 0.859375,
+      "importance_score": 0.009074259549379349
+    },
+    "dnn.dense_0.bias": {
+      "shape": [
+        64
+      ],
+      "param_count": 64,
+      "pruned_count": 55,
+      "pruning_rate": 0.859375,
+      "importance_score": 0.011866920627653599
+    },
+    "dnn.bn_0.weight": {
+      "shape": [
+        64
+      ],
+      "param_count": 64,
+      "pruned_count": 55,
+      "pruning_rate": 0.859375,
+      "importance_score": 1.213559698953759e-06
+    },
+    "dnn.bn_0.bias": {
+      "shape": [
+        64
+      ],
+      "param_count": 64,
+      "pruned_count": 55,
+      "pruning_rate": 0.859375,
+      "importance_score": 4.69526548840804e-06
+    },
+    "dnn.dense_1.weight": {
+      "shape": [
+        32,
+        64
+      ],
+      "param_count": 2048,
+      "pruned_count": 1994,
+      "pruning_rate": 0.9736328125,
+      "importance_score": 5.494056495081168e-06
+    },
+    "dnn.dense_1.bias": {
+      "shape": [
+        32
+      ],
+      "param_count": 32,
+      "pruned_count": 26,
+      "pruning_rate": 0.8125,
+      "importance_score": 0.0007376586436294019
+    },
+    "dnn.bn_1.weight": {
+      "shape": [
+        32
+      ],
+      "param_count": 32,
+      "pruned_count": 26,
+      "pruning_rate": 0.8125,
+      "importance_score": 2.046186409643269e-06
+    },
+    "dnn.bn_1.bias": {
+      "shape": [
+        32
+      ],
+      "param_count": 32,
+      "pruned_count": 26,
+      "pruning_rate": 0.8125,
+      "importance_score": 2.556414074206259e-05
+    },
+    "dnn_linear.weight": {
+      "shape": [
+        1,
+        32
+      ],
+      "param_count": 32,
+      "pruned_count": 26,
+      "pruning_rate": 0.8125,
+      "importance_score": 7.52991036279127e-05
+    },
+    "dnn_linear.bias": {
+      "shape": [
+        1
+      ],
+      "param_count": 1,
+      "pruned_count": 0,
+      "pruning_rate": 0.0,
+      "importance_score": 0.00964229367673397
+    }
+  },
+  "stats": {
+    "total_params": 167045,
+    "pruned_params": 13303,
+    "pruning_rate": 0.07963722350264898,
+    "layers": {
+      "embedding_dict.user": {
+        "param_count": 12000,
+        "pruned_count": 864,
+        "importance_score": 9.226919672755685e-09
+      },
+      "embedding_dict.item": {
+        "param_count": 48996,
+        "pruned_count": 3576,
+        "importance_score": 4.617383098093342e-08
+      },
+      "embedding_dict.daytime": {
+        "param_count": 12000,
+        "pruned_count": 0,
+        "importance_score": 7.67683658864371e-08
+      },
+      "embedding_dict.weekday": {
+        "param_count": 12000,
+        "pruned_count": 0,
+        "importance_score": 6.957157694387206e-08
+      },
+      "embedding_dict.isweekend": {
+        "param_count": 12000,
+        "pruned_count": 0,
+        "importance_score": 9.137660583746765e-08
+      },
+      "embedding_dict.homework": {
+        "param_count": 12000,
+        "pruned_count": 0,
+        "importance_score": 3.747216581473367e-08
+      },
+      "embedding_dict.cost": {
+        "param_count": 12000,
+        "pruned_count": 0,
+        "importance_score": 2.72316658112004e-08
+      },
+      "embedding_dict.weather": {
+        "param_count": 12000,
+        "pruned_count": 0,
+        "importance_score": 8.818559393830583e-08
+      },
+      "embedding_dict.country": {
+        "param_count": 12000,
+        "pruned_count": 0,
+        "importance_score": 7.461242290673908e-08
+      },
+      "embedding_dict.city": {
+        "param_count": 12000,
+        "pruned_count": 0,
+        "importance_score": 8.608211032878899e-08
+      },
+      "dnn": {
+        "param_count": 10016,
+        "pruned_count": 8837,
+        "importance_score": 0.0217178520294965
+      },
+      "dnn_linear": {
+        "param_count": 33,
+        "pruned_count": 26,
+        "importance_score": 0.009717592780361883
+      }
+    }
+  },
+  "layer_contribution": {
+    "percentages": {
+      "dnn_layer_0": 99.93060934069177,
+      "dnn_layer_1": 0.04944332211163852,
+      "dnn_other": 0.018884828194580296,
+      "embedding_dict.item": 0.00026742013441397326,
+      "embedding_dict.isweekend": 0.00012961456730074233,
+      "embedding_dict.weather": 0.00012508822993611304,
+      "embedding_dict.city": 0.00012210451669574649,
+      "embedding_dict.daytime": 0.00010889328260711793,
+      "embedding_dict.country": 0.0001058351571479238,
+      "embedding_dict.weekday": 9.868488600871548e-05,
+      "embedding_dict.homework": 5.315297817078965e-05,
+      "embedding_dict.cost": 3.862718153980429e-05,
+      "embedding_dict.user": 1.3088068191546652e-05
+    }
+  }
+}

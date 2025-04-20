@@ -12,7 +12,7 @@ from sklearn.metrics import log_loss, roc_auc_score
 # 添加项目根目录到路径以便导入
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from models.teacher_model import CTRTeacherModel
+from model_old.teacher_model import CTRTeacherModel
 
 class LightweightCTRModel(nn.Module):
     """
